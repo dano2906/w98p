@@ -1,0 +1,21 @@
+---
+import "../styles/base.css"
+const { title } = Astro.props
+import icon from "../assets/windows-98-logo.svg";
+import UserBar from "../components/UserBar.astro";
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio personal de DanoDev">
+    <link rel="shortcut icon" href={icon.src} type="image/svg+xml">
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="max-w-screen max-h-screen w-screen h-screen bg-greenBody relative">
+      <slot />
+      <UserBar />
+    </main>
+  </body>
+</html>

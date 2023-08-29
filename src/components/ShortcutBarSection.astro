@@ -1,0 +1,17 @@
+---
+import blog from "../assets/blog.png"
+import contact from "../assets/contact.png"
+import media from "../assets/media.png"
+import projects from "../assets/projects.png"
+import skills from "../assets/skills.png"
+import BarDivider from "./BarDivider.astro"
+---
+
+<div class="h-full py-0.5 px-1 flex gap-x-1 border-l-[0.6px] border-r-[0.6px] border-grayDarker">
+    <BarDivider />
+    <img src={blog.src} alt="Blog icon" width={blog.width} height={blog.height}>
+    <img src={contact.src} alt="Outlook icon" width={contact.width} height={contact.height}>
+    <img src={media.src} alt="Internet Explorer icon" width={media.width} height={media.height}>
+    <img src={projects.src} alt="Directory search icon" width={projects.width} height={projects.height}>
+    <img src={skills.src} alt="Directory config icon" width={skills.width} height={skills.height}>
+</div>

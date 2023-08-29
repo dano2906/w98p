@@ -1,0 +1,15 @@
+---
+import BarDivider from "./BarDivider.astro"
+import ShortcutBarSection from "./ShortcutBarSection.astro";
+import StartBarButton from "./StartBarButton.astro";
+---
+
+<footer class="w-full h-9 bg-grayMedium absolute bottom-0 border-t-2 border-l-2 border-grayLight flex flex-row items-center justify-between gap-x-0.5">
+    <div class="h-full flex flex-row items-center justify-center gap-x-0.5">
+        <StartBarButton />
+        <ShortcutBarSection />
+    </div>
+    <div class="h-full py-0.5 px-1 flex-grow grid grid-cols-5 gap-x-0.5">
+        <BarDivider />
+    </div>
+</footer>
