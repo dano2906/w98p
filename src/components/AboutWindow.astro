@@ -1,0 +1,52 @@
+---
+import logo from "../assets/W98logo.webp";
+import icon from "../assets/windows-icon.png"
+---
+<section id="about" class="w-2/5 h-96 absolute bottom-28 left-28 border-2 border-t-gray-200 border-l-gray-200 border-b-grayDark border-r-grayDark bg-[url('../assets/bgabout.webp')] bg-cover" >
+    <div class="w-full h-[5%] px-0.5 bg-gradient-to-r from-blueDark via-blueLight/60 to-blue-700 flex items-center justify-between">
+        <div class="flex items-center justify-center gap-x-1">
+            <img src={icon.src} alt="Windows 98 icon" width="12" height="12">
+            <span class="ml-1 font-levi font-semibold text-xs tracking-widest text-white select-none">Bienvenido a mi Portfolio</span>
+        </div>
+        <button class="closeAbout w-4 h-4 bg-grayLight grid place-content-center border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 font-levi font-black text-sm text-black">X</button>
+    </div>
+    <header class="w-full h-[25%] p-2 relative flex flex-col gap-y-0.5">
+        <img src={logo.src} alt="Microsoft Windows 98 Logo" width="128" height="64">
+        <div class="w-full h-[1px] absolute top-3/4 left-0 z-10 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500"></div>
+    </header>
+    <div class="w-full h-[60%] flex items-center justify-between">
+        <div class="w-1/2 h-full py-6">
+            <ul class="w-full h-full flex flex-col items-start justify-start">
+                <li class="w-4/5 h-4 px-2 bg-black text-white border-l-4 border-b-2 border-l-black border-b-yellow-600 font-levi font-medium text-xs uppercase tracking-widest">Contenidos</li>
+                <li class="w-4/5 h-7 px-2 border-l-4 border-b-2 border-l-blue-600 border-b-yellow-600/20 font-levi font-bold text-base">Regístrate</li>
+                <li class="w-4/5 h-7 px-2 border-l-4 border-b-2 border-l-red-600 border-b-yellow-600/20 font-levi font-bold text-base">Conéctate a Internet</li>
+                <li class="w-4/5 h-7 px-2 border-l-4 border-b-2 border-l-green-600 border-b-yellow-600/20 font-levi font-bold text-base">Descubre Windows 98</li>
+                <li class="w-4/5 h-7 px-2 border-l-4 border-b-2 border-l-yellow-300 border-b-yellow-600/20 font-levi font-bold text-base">Manté tu computadora</li>
+            </ul>
+        </div>
+        <div class="w-1/2 h-full px-1 flex flex-col items-start justify-around gap-y-0.5">
+            <h1 class="font-levi font-bold text-2xl text-black text-left">Bienvenido a mi portfolio</h1>
+            <p class="font-levi font-medium text-sm text-black text-left">Soy Danilo León, desarrollador de software cubano. Actualmente trabajo en Radio Habana Cuba donde he desarrollado aplicaciones web para la gestión del patrimonio documental.</p>
+            <p class="font-levi font-medium text-sm text-black text-left">Este portfolio está desarrollado inspirado en Microsoft Windows 98 (año en que nací)</p>
+            <p class="font-levi font-medium text-sm text-black text-left">Siéntete libre de encontrar bugs</p>
+        </div>
+    </div>
+    <footer class="w-full h-[10%] p-1 flex items-end justify-between">
+        <div class="flex items-center justify-center gap-x-1">
+            <input type="checkbox" checked class="accent-grayLighter border-1 border-grayDarker"/>
+            <span class="font-levi font-normal text-sm text-gray-900 tracking-wide">Mostrar esta ventana cada vez que Windows 98 inicie</span>
+        </div>
+        <button class="closeAbout w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker bg-grayLight font-levi font-normal text-xs text-black">Cancelar</button>
+    </footer>
+</section>
+
+<script>
+    const closeAboutButton = document.querySelectorAll('.closeAbout');
+    const aboutWindow = document.getElementById('about')
+    closeAboutButton.forEach((close)=>{
+        close.addEventListener('click',()=>{
+        aboutWindow.classList.add("hidden")
+        })
+    })
+    
+</script>

@@ -28,12 +28,12 @@ const projects =[{
 }]
 ---
 
-<div class="w-80 h-96 absolute bottom-1/4 right-1/4 border-2 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 bg-grayLight flex flex-col items-center justify-between gap-y-1">
+<div id="projects" class="w-80 h-96 absolute bottom-1/4 right-1/4 border-2 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 bg-grayLight flex flex-col items-center justify-between gap-y-1">
     <section class="w-full h-[5%] px-0.5 bg-gradient-to-r from-blueDark via-blueLight/60 to-blue-700 flex items-center justify-between">
         <span class="ml-1 font-levi font-semibold text-sm tracking-widest text-white select-none">Mis proyectos</span>
         <div class="flex items-center justify-between gap-x-0.5">
             <button class="w-4 h-4 bg-grayLight grid place-content-center border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 font-levi font-black text-sm text-black">?</button>
-            <button class="w-4 h-4 bg-grayLight grid place-content-center border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 font-levi font-black text-sm text-black">X</button>
+            <button class="closeProject w-4 h-4 bg-grayLight grid place-content-center border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 font-levi font-black text-sm text-black">X</button>
         </div>
     </section>
     <section class="w-[95%] h-[85%] mx-auto border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 overflow-y-scroll">
@@ -45,7 +45,17 @@ const projects =[{
     </section>
     <section class="w-full h-[10%] px-2 flex items-center justify-end gap-x-1">
         <button class="w-20 h-6 border-1 border-b-2 border-r-2 border-black font-levi font-normal text-xs text-black">Ok</button>
-        <button class="w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker font-levi font-normal text-xs text-black">Cancel</button>
+        <button class="closeProject w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker font-levi font-normal text-xs text-black">Cancel</button>
         <button class="w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker font-levi font-normal text-xs text-gray-900/40">Apply</button>
     </section>
 </div>
+
+<script>
+    const closeProjectsButtons = document.querySelectorAll('.closeProject');
+    const projectsWindow = document.getElementById('projects')
+    closeProjectsButtons.forEach((close)=>{
+        close.addEventListener('click',()=>{
+            projectsWindow.classList.add("hidden")
+        })
+    })
+</script>

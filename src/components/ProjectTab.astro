@@ -18,13 +18,13 @@ function getTypeSrc (type:string) {
 ---
 <article class="w-full h-20 flex flex-row items-center justify-center border-b-1 border-b-grayDark/40">
     <div class="w-1/4 h-full flex flex-col items-center justify-center gap-y-2">
-            <img src={getTypeSrc(type)} alt="Imagen para tipo de proyecto" width="28" height="28">
-            <a href={url} target="_blank">
-                <img src={link.src} alt="Link icon" width="28" height="28" class=`${url == null && "opacity-40"}`>
-            </a>
+        <img src={getTypeSrc(type)} alt="Imagen para tipo de proyecto" width="28" height="28">
+        <a href={url} target="_blank" class=`${url != null && "transition-opacity hover:opacity-30"}`>
+            <img src={link.src} alt="Link icon" width="28" height="28" class=`${url == null && "opacity-50"}`>
+        </a>
     </div>
     <div class="w-3/4 h-full flex flex-col items-start justify-center">
-            <h3 class="font-levi font-black text-base text-black">{name}</h3>
-            <p class="font-levi font-black text-xs text-grayDarker">{short_description}</p>
+        <a href="" class="font-levi font-black text-base text-black">{name}</a>
+        <a href="" class="font-levi font-black text-xs text-grayDarker">{short_description}</a>
     </div>
 </article>

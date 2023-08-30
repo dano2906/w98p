@@ -1,0 +1,55 @@
+---
+import twitter from "../assets/twitter.svg"
+import gmail from "../assets/gmail.svg"
+import github from "../assets/github.svg"
+import projects from "../assets/projects.png"
+import icon from "../assets/windows-icon.png"
+import OpenTab from "./OpenTab.astro"
+
+const open_tabs = [{
+    text: "Sígueme en Twitter!!!",
+    icon: twitter,
+    link: "http://x.com/dleon_98"
+},{
+    text: "Contáctame por correo",
+    icon: gmail,
+    link: "mailto:dlg9806@gmail.com"
+},{
+    text: "Una estrellita en Github???",
+    icon: github,
+    link: "https://github.com/dano2906"
+}]
+---
+
+<nav class="h-full py-[0.4px] flex-grow grid grid-cols-5 gap-x-0.5">
+    {
+        open_tabs.map(({text,icon,link},index)=>(
+            <OpenTab text={text} icon={icon} link={link} key={index}/>
+        ))
+    }
+    <button id="toggleProjects" class="px-1 flex items-center justify-start gap-x-2 border-2 hover:border-b-grayLight hover:border-r-grayLight hover:border-t-grayDarker hover:border-l-grayDarker border-t-grayLight border-l-grayLight border-b-grayDarker border-r-grayDarker">
+        <img src={projects.src} alt="Social media icon" width="20" height="20">
+        <span class="font-levi font-bold text-xs text-gray-900">Mis Proyectos</span>
+    </button>
+    <button id="toggleAbout" class="px-1 flex items-center justify-start gap-x-2 border-2 hover:border-b-grayLight hover:border-r-grayLight hover:border-t-grayDarker hover:border-l-grayDarker border-t-grayLight border-l-grayLight border-b-grayDarker border-r-grayDarker">
+        <img src={icon.src} alt="Social media icon" width="20" height="20">
+        <span class="font-levi font-bold text-xs text-gray-900">Sobre mí</span>
+    </button>
+</nav>
+
+<script>
+    const toggleProjects = document.getElementById('toggleProjects')
+    const projectsWindow = document.getElementById('projects')
+    const toggleAbout = document.getElementById('toggleAbout')
+    const aboutWindow = document.getElementById('about')
+
+    toggleProjects.addEventListener('click',()=>{
+        projectsWindow.classList.toggle('hidden');
+        toggleProjects.removeEventListener('click',()=>{})
+    })
+
+    toggleAbout.addEventListener('click',()=>{
+        aboutWindow.classList.toggle('hidden');
+        toggleAbout.removeEventListener('click',()=>{})
+    })
+</script>
