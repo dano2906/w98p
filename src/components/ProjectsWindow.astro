@@ -1,0 +1,51 @@
+---
+import ProjectTab from "./ProjectTab.astro";
+const projects =[{
+    name:'DanoLib',
+    short_description: 'Ejercicio para una prueba técnica del youtuber Midudev',
+    type: 'frontend',
+    url: 'https://dano-reading-list.netlify.app'
+},{
+    name:'Spense site',
+    short_description: 'Ejercicio para una página de programación competitiva',
+    type: 'frontend',
+    url: 'https://01-spense-site.netlify.app'
+},{
+    name:'FonotecaAPI',
+    short_description: 'API REST para la emisora de radio RADIO HABANA CUBA',
+    type: 'backend',
+    url: null
+},{
+    name:'FonotecaRHC',
+    short_description: 'Interfaz para la emisora de radio RADIO HABANA CUBA',
+    type: 'frontend',
+    url: null
+},{
+    name:'Portfolio DanoDev',
+    short_description: 'Portfolio inspirado en Windows 98',
+    type: 'frontend',
+    url: null
+}]
+---
+
+<div class="w-80 h-96 absolute bottom-1/4 right-1/4 border-2 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 bg-grayLight flex flex-col items-center justify-between gap-y-1">
+    <section class="w-full h-[5%] px-0.5 bg-gradient-to-r from-blueDark via-blueLight/60 to-blue-700 flex items-center justify-between">
+        <span class="ml-1 font-levi font-semibold text-sm tracking-widest text-white select-none">Mis proyectos</span>
+        <div class="flex items-center justify-between gap-x-0.5">
+            <button class="w-4 h-4 bg-grayLight grid place-content-center border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 font-levi font-black text-sm text-black">?</button>
+            <button class="w-4 h-4 bg-grayLight grid place-content-center border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 font-levi font-black text-sm text-black">X</button>
+        </div>
+    </section>
+    <section class="w-[95%] h-[85%] mx-auto border-1 border-t-gray-200 border-l-gray-200 border-b-gray-800 border-r-gray-800 overflow-y-scroll">
+        {
+            projects.map(({name,short_description,type,url},index)=>(
+                <ProjectTab name={name} short_description={short_description} type={type} url={url} key={index}/>
+            ))
+        }
+    </section>
+    <section class="w-full h-[10%] px-2 flex items-center justify-end gap-x-1">
+        <button class="w-20 h-6 border-1 border-b-2 border-r-2 border-black font-levi font-normal text-xs text-black">Ok</button>
+        <button class="w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker font-levi font-normal text-xs text-black">Cancel</button>
+        <button class="w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker font-levi font-normal text-xs text-gray-900/40">Apply</button>
+    </section>
+</div>

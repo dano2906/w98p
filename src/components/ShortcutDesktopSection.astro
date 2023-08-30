@@ -1,0 +1,29 @@
+---
+import myblog from "../assets/myblog.png"
+import faq from "../assets/faq.png"
+import projects from "../assets/projects.png"
+import ShortcutDesktopIcon from "./ShortcutDesktopIcon.astro";
+
+const shortcuts = [{
+    icon: myblog,
+    text: "Mi Blog",
+    url: ""
+},{
+    icon: faq,
+    text: "Sobre mí",
+    url: ""
+},{
+    icon: projects,
+    text: "Proyectos",
+    url: ""
+},]
+
+---
+
+<div class="w-40 h-4/5 absolute left-0 top-0 m-3 p-3 flex flex-col items-start justify-start gap-y-1">
+    {
+        shortcuts.map(({icon,text,url},index) => (
+            <ShortcutDesktopIcon icon={icon} text={text} url={url} key={index}/>
+        ))
+    }
+</div>

@@ -1,0 +1,8 @@
+---
+const {icon,text,url} = Astro.props
+---
+
+<a href={url} class="w-20 h-20 p-1 rounded-sm flex flex-col items-center justify-center gap-y-1 hover:bg-gray-600/40">
+   <img src={icon.src} alt="Shortcut icon" width={icon.width*1.2} height={icon.height*1.2}/>
+   <span class="font-levi font-medium text-base text-gray-900">{text}</span>
+</a>
