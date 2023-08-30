@@ -1,0 +1,31 @@
+---
+import twitter from "../assets/twitter.svg"
+import gmail from "../assets/gmail.svg"
+import github from "../assets/github.svg"
+import SocialMediaTab from "./SocialMediaTab.astro"
+
+const social_media = [{
+    text: "Sígueme en Twitter!!!",
+    icon: twitter,
+    link: "link a mi twitter",
+    flat:true
+},{
+    text: "Contáctame por correo",
+    icon: gmail,
+    link: "link a mi gmail",
+    flat:false
+},{
+    text: "Una estrellita en Github???",
+    icon: github,
+    link: "link a mi github",
+    flat:false
+}]
+---
+
+<nav class="h-full py-0.5 flex-grow grid grid-cols-4 gap-x-0.5">
+    {
+        social_media.map(({text,icon,link,flat},index)=>(
+            <SocialMediaTab text={text} icon={icon} link={link} flat={flat} key={index}/>
+        ))
+    }
+</na>

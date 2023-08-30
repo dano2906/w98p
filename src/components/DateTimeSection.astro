@@ -1,0 +1,13 @@
+---
+import calendar from "../assets/calendar.png"
+import speaker from "../assets/speaker.png"
+import BarDivider from "./BarDivider.astro"
+const date = new Date();
+---
+
+<BarDivider />
+<div class="h-full p-2 flex items-center justify-center gap-x-1 border-2 border-b-grayLight border-r-grayLight border-t-grayDark border-l-grayDark">
+    <img src={calendar.src} alt="Calendar icon" width={calendar.width*0.75} height={calendar.height*0.75}>
+    <img src={speaker.src} alt="Speaker loud icon" width={speaker.width*0.75} height={speaker.height*0.75}>
+    <span class="font-levi font-medium text-lg text-gray-900">{date.getHours()}:{date.getMinutes()} pm</span>
+</div>

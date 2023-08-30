@@ -1,7 +1,9 @@
 ---
-import BarDivider from "./BarDivider.astro"
+import DateTimeSection from "./DateTimeSection.astro";
 import ShortcutBarSection from "./ShortcutBarSection.astro";
+import SocialMediaSection from "./SocialMediaSection.astro";
 import StartBarButton from "./StartBarButton.astro";
+import BarDivider from "./BarDivider.astro"
 ---
 
 <footer class="w-full h-9 bg-grayMedium absolute bottom-0 border-t-2 border-l-2 border-grayLight flex flex-row items-center justify-between gap-x-0.5">
@@ -9,7 +11,7 @@ import StartBarButton from "./StartBarButton.astro";
         <StartBarButton />
         <ShortcutBarSection />
     </div>
-    <div class="h-full py-0.5 px-1 flex-grow grid grid-cols-5 gap-x-0.5">
-        <BarDivider />
-    </div>
+    <BarDivider />
+    <SocialMediaSection />
+    <DateTimeSection />
 </footer>
