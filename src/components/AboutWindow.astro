@@ -39,14 +39,3 @@ import icon from "../assets/windows-icon.png"
         <button class="closeAbout w-20 h-6 border-1 border-b-2 border-r-2 border-t-gray-200 border-l-gray-200 border-b-grayDarker border-r-grayDarker bg-grayLight font-levi font-normal text-xs text-black">Cancelar</button>
     </footer>
 </section>
-
-<script>
-    const closeAboutButton = document.querySelectorAll('.closeAbout');
-    const aboutWindow = document.getElementById('about')
-    closeAboutButton.forEach((close)=>{
-        close.addEventListener('click',()=>{
-        aboutWindow.classList.add("hidden")
-        })
-    })
-    
-</script>
